@@ -1,0 +1,14 @@
+.nav-wrapper{
+  background-color: #5C64B2;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  box-shadow: 1px 1px 10px rgba(0,0,0,0.4);
+  background-image: url('https://vignette3.wikia.nocookie.net/es.harrypotter/images/0/0e/Community-header-background/revision/latest/zoom-crop/width/471/height/115?cb=20170613153226');
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 5
+}
+nav div a{
+  height: 100%;
+}
