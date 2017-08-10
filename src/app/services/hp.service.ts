@@ -2,13 +2,11 @@ import { Injectable } from '@angular/core'
 import { Http } from "@angular/http";
 
 import "rxjs/add/operator/toPromise";
-import "rxjs/add/operator/map";
-
 
 @Injectable()
 export class HPCharactersService {
     
-    private basePath = 'http://hp-api.herokuapp.com'
+    private basePath = require('../config')
 
     constructor(private http:Http){
 
@@ -20,12 +18,23 @@ export class HPCharactersService {
       return Promise.reject(error.message || error)
     }
 
-    getHPCharacters():Promise<any> {
+    getHPCharacters():Promise<any[]> {
         let url = `${this.basePath}/api/characters`
         return this.http.get(url)
                           .toPromise()
-                          .then(response => response.json().data)
+                          .then(response => response.json())
                           .catch(this.handleError)
+    }
+    
+    getHPCharacter(name: string): Promise<any> {
+      // let url = `${this.basePath}/character/${id}`
+      //   return this.http.get(url)
+      //                     .toPromise()
+      //                     .then(response => response.json().data as HistorialCharacter)
+      //                     .catch(this.handleError)
+      
+      return this.getHPCharacters()
+                .then(character => character.find(character => character.name === name.replace('%20',' ')));
     }
 
     

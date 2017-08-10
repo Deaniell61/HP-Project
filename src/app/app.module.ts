@@ -4,6 +4,9 @@ import { HttpModule } from "@angular/http";
 
 import { AppComponent }  from './app.component';
 import { MainPrincipalComponent } from "./components/main.component";
+import { CharactersComponent } from "./components/characters.component";
+import { CharacterDetailComponent } from "./components/character-detail.component";
+
 import { HPCharactersService } from "./services/hp.service";
 
 import { AppRoutesModule } from "./routes/app-routes.router";
@@ -16,7 +19,9 @@ import { AppRoutesModule } from "./routes/app-routes.router";
                 ],
   declarations: [ 
                   AppComponent,
-                  MainPrincipalComponent
+                  MainPrincipalComponent,
+                  CharactersComponent,
+                  CharacterDetailComponent
                 ],
   providers:    [ HPCharactersService ],
   bootstrap:    [ AppComponent ]

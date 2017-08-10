@@ -1,17 +1,36 @@
 import { Component, OnInit } from '@angular/core';
 import { HPCharactersService } from "../services/hp.service";
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'hp-characters',
-  templateUrl: 'templates/hp-characters.component.html'
+  templateUrl: './../templates/hp-characters.component.html'
 })
 
-export class NameComponent implements OnInit {
-  constructor(private service: HPCharactersService) { }
+export class CharactersComponent implements OnInit {
+  selectedCharacter:any
+
+  characters:any[]
+
+  constructor(
+              private service: HPCharactersService,
+              private router:Router) {
+  }
+
+  onSelect(character:any){
+    this.selectedCharacter = character;
+  }
+
 
   ngOnInit() {
-    this.service.getHPCharacters().then(characters => {
-      this.characters = characters.slice(1, 6)
+    // this.service.getHistoricalCharacters()
+    //             .subscribe(data => this.characters = data)
+    this.service.getHPCharacters().then(response => {
+      this.characters = response
     }).catch(error => console.log(error))
-   }
+  }
+
+  goToDetail(character:any) {
+      this.router.navigate(['/character',character.name])
+    }
 }
