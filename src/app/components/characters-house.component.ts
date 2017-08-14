@@ -38,5 +38,9 @@ export class CharactersHouseComponent implements OnInit {
     goToDetail(character:any) {
         this.router.navigate(['/character',character.name])
       }
+
+    goBack(): void {
+      this.location.back();
+    }
       
 }

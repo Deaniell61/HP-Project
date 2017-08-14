@@ -45,13 +45,21 @@ export class HPCharactersService {
                         .catch(this.handleError)
   }
 
-    getHPStaff():Promise<any[]> {
-      let url = `${this.basePath}/api/characters/staff`
-      return this.http.get(url)
-                        .toPromise()
-                        .then(response => response.json())
-                        .catch(this.handleError)
-  }
+  getHPStaff():Promise<any[]> {
+    let url = `${this.basePath}/api/characters/staff`
+    return this.http.get(url)
+                      .toPromise()
+                      .then(response => response.json())
+                      .catch(this.handleError)
+}
+
+getHPHouses():Promise<any[]> {
+  let url = `./app/classes/houses.json`
+  return this.http.get(url)
+                    .toPromise()
+                    .then(response => response.json())
+                    .catch(this.handleError)
+}
 
   getHPCharactersHouse(name: string): Promise<any[]> {
        

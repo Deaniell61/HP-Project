@@ -1,0 +1,26 @@
+[
+  {
+    "name":"Gryffindor",
+    "image": "https://i.pinimg.com/originals/d1/e8/53/d1e853a51cc4f6b25a9f96914e04b992.png",
+    "fundator":"",
+    "description":""
+  },
+  {
+    "name":"Slytherin",
+    "image": "https://i.pinimg.com/originals/71/60/44/716044586b9ea4450d092820fa8db1e4.png",
+    "fundator":"",
+    "description":""
+  },
+  {
+    "name":"Hufflepuff",
+    "image": "http://vignette3.wikia.nocookie.net/es.harrypotter/images/3/30/Logo_Hufflepuff_2.png/revision/latest?cb=20160417160852",
+    "fundator":"",
+    "description":""
+  },
+  {
+    "name":"Ravenclaw",
+    "image": "http://orig01.deviantart.net/d885/f/2012/163/7/4/ravenclaw_crest_by_piichixchan-d5386zf.png",
+    "fundator":"",
+    "description":""
+  }
+]

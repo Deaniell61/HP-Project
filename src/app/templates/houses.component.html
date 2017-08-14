@@ -1,0 +1,17 @@
+<div class="row">
+  <div *ngFor="let house of houses" class="col s3 margen " (click) = "goToCharacteresHouse(house)">
+    <div class="card">
+      <div class="card-image">
+        <img src="{{house.image}}" alt="{{house.name}}" width="auto" height="500px" class="">
+        <span class="card-title">{{house.name}}</span>
+      </div>
+      <div class="card-content ">
+        <p>I am a very simple card. I am good at containing small bits of information.
+        I am convenient because I require little markup to use effectively.</p>
+      </div>
+      <div class="card-action ">
+        <a href="#">This is a link</a>
+      </div>
+    </div>
+  </div>
+</div>
