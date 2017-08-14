@@ -6,6 +6,10 @@ import { AppComponent }  from './app.component';
 import { MainPrincipalComponent } from "./components/main.component";
 import { CharactersComponent } from "./components/characters.component";
 import { CharacterDetailComponent } from "./components/character-detail.component";
+import { StudentsComponent } from "./components/students.component";
+import { StaffComponent } from "./components/staff.component";
+import { CharactersHouseComponent } from "./components/characters-house.component";
+import { HousesComponent } from "./components/houses.component";
 
 import { HPCharactersService } from "./services/hp.service";
 
@@ -21,7 +25,11 @@ import { AppRoutesModule } from "./routes/app-routes.router";
                   AppComponent,
                   MainPrincipalComponent,
                   CharactersComponent,
-                  CharacterDetailComponent
+                  CharacterDetailComponent,
+                  StaffComponent,
+                  StudentsComponent,
+                  CharactersHouseComponent,
+                  HousesComponent
                 ],
   providers:    [ HPCharactersService ],
   bootstrap:    [ AppComponent ]

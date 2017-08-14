@@ -37,5 +37,31 @@ export class HPCharactersService {
                 .then(character => character.find(character => character.name === name.replace('%20',' ')));
     }
 
+    getHPStudents():Promise<any[]> {
+      let url = `${this.basePath}/api/characters/students`
+      return this.http.get(url)
+                        .toPromise()
+                        .then(response => response.json())
+                        .catch(this.handleError)
+  }
+
+    getHPStaff():Promise<any[]> {
+      let url = `${this.basePath}/api/characters/staff`
+      return this.http.get(url)
+                        .toPromise()
+                        .then(response => response.json())
+                        .catch(this.handleError)
+  }
+
+  getHPCharactersHouse(name: string): Promise<any[]> {
+       
+    let url = `${this.basePath}/api/characters/house/${name.replace('%20',' ')}`
+    return this.http.get(url)
+                      .toPromise()
+                      .then(response => response.json())
+                      .catch(this.handleError)
+    
+   
+  }
     
 }
