@@ -4,9 +4,175 @@
     "wood": "holly",
     "core": "phoenix feather",
     "length": 11,
+    "image": "https://vignette1.wikia.nocookie.net/harrypotter/images/1/17/Harry_Potter_wand_promo.png/revision/latest?cb=20161120235150"
+  },
+  {
+    "name": "Hermione Granger",    
+    "wood": "vine",
+    "core": "dragon heartstring",
+    "length": "",
+    "image": "https://az480170.vo.msecnd.net/debd7172-44dc-4681-b074-d940a93cc4e1/img/prd/45d00f71-b6a9-4d9d-a925-d33c4a58ff2c/l_hrmnwand_prph_hpe3.png"
+  },
+  {
+    "name": "Ron Weasley",    
+    "wood": "willow",
+    "core": "unicorn tail-hair",
+    "length": 14,
+    "image": "https://vignette2.wikia.nocookie.net/harrypotter/images/9/91/Bill_Weasley_wand.png/revision/latest?cb=20161126073734"
+  },
+  {
+    "name": "Draco Malfoy",    
+    "wood": "hawthorn",
+    "core": "unicorn tail-hair",
+    "length": 10,
+    "image": "http://vignette4.wikia.nocookie.net/harrypotter/images/1/11/Draco_Malfoy_wand.png/revision/latest?cb=20161128045933"
+  },
+  {
+    "name": "Minerva McGonagall",    
+    "wood": "",
+    "core": "",
+    "length": "",
+    "image": "https://ae01.alicdn.com/kf/HTB19MsNOpXXXXcHXXXXq6xXFXXXe/Colsplay-Metal-Core-Newest-Quality-Deluxe-COS-Harry-Potter-Minerva-font-b-McGonagall-b-font-Magic.jpg"
+  },
+  {
+    "name": "Cedric Diggory",    
+    "wood": "ash",
+    "core": "unicorn hair",
+    "length": "12.25",
+    "image": "https://c1-zingpopculture.eb-cdn.com.au/merchandising/images/packshots/9c764e5fd61346659b6e18c32fa93698_Large.png"
+  },
+  {
+    "name": "Cho Chang",    
+    "wood": "",
+    "core": "",
+    "length": "",
+    "image": "http://vignette3.wikia.nocookie.net/harrypotter/images/9/92/Cho_Chang_wand.png/revision/latest?cb=20161128045736"
+  },
+  {
+    "name": "Severus Snape",    
+    "wood": "",
+    "core": "",
+    "length": "",
+    "image": "http://vignette2.wikia.nocookie.net/harrypotter/images/3/30/Severus_Snape_wand.png/revision/latest?cb=20161128052653"
+  },
+  {
+    "name": "Rubeus Hagrid",    
+    "wood": "oak",
+    "core": "",
+    "length": 16,
     "image": ""
   },
   {
-
+    "name": "Neville Longbottom",
+    "wood": "cherry",
+    "core": "unicorn tail-hair",
+    "length": 13,
+    "image": "http://vignette2.wikia.nocookie.net/harrypotter/images/a/ad/Neville_Longbottom_2nd_wand.png/revision/latest?cb=20161128052652"
+  },
+  {
+    "name": "Luna Lovegood",
+    "wood": "",
+    "core": "",
+    "length": "",
+    "image": "https://s-media-cache-ak0.pinimg.com/originals/94/13/e5/9413e57b48c183c100838f368fa79732.png"
+  },
+  {
+    "name": "Ginny Weasley",
+    "wood": "yew",
+    "core": "",
+    "length": "",
+    "image": "https://vignette4.wikia.nocookie.net/harrypotter/images/0/03/Ginny_Weasley_wand.png/revision/latest?cb=20161128052650"
+  },
+  {
+    "name": "Sirius Black",
+    "wood": "",
+    "core": "",
+    "length": "",
+    "image": "https://vignette1.wikia.nocookie.net/harrypotter/images/9/9e/Sirius_Black_wand.png/revision/latest?cb=20161128052654"
+  },
+  {
+    "name": "Remus Lupin",
+    "wood": "cypress",
+    "core": "unicorn tail-hair",
+    "length": 10.25,
+    "image": "https://vignette4.wikia.nocookie.net/harrypotter/images/7/7e/Remus_Lupin_wand.png/revision/latest?cb=20161126073935"
+  },
+  {
+    "name": "Arthur Weasley",
+    "wood": "",
+    "core": "",
+    "length": "",
+    "image": "https://vignette2.wikia.nocookie.net/harrypotter/images/5/57/Arthur_Weasley_wand.png/revision/latest?cb=20161126073344"
+  },
+  {
+    "name": "Bellatrix Lestrange",
+    "wood": "walnut",
+    "core": "dragon heartstring",
+    "length": 12.75,
+    "image": "https://i.pinimg.com/originals/1e/f5/d0/1ef5d06003bb75ee3339605f5c801593.png"
+  },
+  {
+    "name": "Lord Voldemort",
+    "wood": "yew",
+    "core": "phoenix feather",
+    "length": 13.5,
+    "image": "http://vignette2.wikia.nocookie.net/harrypotter/images/9/9d/Volemorts_Wand.png/revision/latest/scale-to-width-down/2000?cb=20161128055137"
+  },
+  {
+    "name": "Horace Slughorn",
+    "wood": "cedar",
+    "core": "dragon heartstring",
+    "length": 10.25,
+    "image": "https://vignette1.wikia.nocookie.net/harrypotter/images/d/d5/Horace_Slughorn_wand.png/revision/latest?cb=20161128052651"
+  },
+  {
+    "name": "Kingsley Shacklebolt",
+    "wood": "",
+    "core": "",
+    "length": "",
+    "image": "http://images.esellerpro.com/2243/I/298/71/DECOR490-harry-potter-replica-wand-kingsley-shacklebolt%20(4).JPG"
+  },
+  {
+    "name": "Dolores Umbridge",
+    "wood": "birch",
+    "core": "dragon heartstring",
+    "length": 8,
+    "image": "http://img4.wikia.nocookie.net/__cb20150317162259/harrypotter/images/d/d8/Baguette_d%27Ombrage.png"
+  },
+  {
+    "name": "Lucius Malfoy",
+    "wood": "elm",
+    "core": "dragon heartstring",
+    "length": 18,
+    "image": "https://c1-zingpopculture.eb-cdn.com.au/merchandising/images/packshots/73c5c16e08b64c29b86c7ffc88d895b0_Large.png"
+  },
+  {
+    "name": "Vincent Crabbe",
+    "wood": "",
+    "core": "",
+    "length": "",
+    "image": "http://vignette2.wikia.nocookie.net/harrypotter/images/f/fa/VincentCrabbeWandNN8228.jpg/revision/latest?cb=20141208234345"
+  },
+  {
+    "name": "Gregory Goyle",
+    "wood": "",
+    "core": "",
+    "length": "",
+    "image": "http://vignette2.wikia.nocookie.net/harrypotter/images/c/c0/GregoryGoyleWandNN8266.jpg/revision/latest?cb=20141208234424"
+  },
+  {
+    "name": "Mrs Norris",
+    "wood": "",
+    "core": "",
+    "length": "",
+    "image": ""
+  },
+  {
+    "name": "Argus Filch",
+    "wood": "",
+    "core": "",
+    "length": "",
+    "image": ""
   }
+
 ]

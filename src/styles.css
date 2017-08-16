@@ -14,3 +14,14 @@ body{
     background-attachment: fixed;
   background-size: 100% 100%
 }
+.selected:hover{
+  width: 17%;
+  height: 310px;
+  
+  position: absolute;
+  z-index: 3;
+}
+.selected:hover img{
+  height: 310px;
+  
+}
