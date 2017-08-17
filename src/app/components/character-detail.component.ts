@@ -4,6 +4,8 @@ import { Location } from "@angular/common";
 
 import { HPCharactersService } from "../services/hp.service";
 
+import { WandsComponent } from "./wands.component";
+
 import 'rxjs/add/operator/switchMap';
 
 @Component({
@@ -17,12 +19,16 @@ import 'rxjs/add/operator/switchMap';
     
     .img-initial{
       box-shadow: 1px 1px 10px rgba(0,0,0,0.4);
-    }`]
+    }
+    
+.nameChar{
+  margin-left: 30%;
+}`]
 })
 
 export class CharacterDetailComponent implements OnInit {
   @Input() character:any
-
+  selCharacter:any
     constructor(
         private router:Router,
         private route:ActivatedRoute,
@@ -37,6 +43,10 @@ export class CharacterDetailComponent implements OnInit {
         .subscribe(character => this.character = character);
     }
       
+    onSelect(character:any){
+      this.selCharacter = character;
+      console.log(character.image)
+    }
 
     goBack(): void {
       this.location.back();

@@ -23,8 +23,7 @@ export class StudentsComponent implements OnInit {
   
   
     ngOnInit() {
-      // this.service.getHistoricalCharacters()
-      //             .subscribe(data => this.characters = data)
+      
       this.service.getHPStudents().then(response => {
         this.characters = response
       }).catch(error => console.log(error))

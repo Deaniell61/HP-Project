@@ -10,6 +10,7 @@ import { StudentsComponent } from "./components/students.component";
 import { StaffComponent } from "./components/staff.component";
 import { CharactersHouseComponent } from "./components/characters-house.component";
 import { HousesComponent } from "./components/houses.component";
+import { WandsComponent } from "./components/wands.component";
 
 import { HPCharactersService } from "./services/hp.service";
 
@@ -29,7 +30,8 @@ import { AppRoutesModule } from "./routes/app-routes.router";
                   StaffComponent,
                   StudentsComponent,
                   CharactersHouseComponent,
-                  HousesComponent
+                  HousesComponent,
+                  WandsComponent
                 ],
   providers:    [ HPCharactersService ],
   bootstrap:    [ AppComponent ]

@@ -1,12 +1,12 @@
 <div class="row">
-  <div *ngFor="let house of houses" class="col s3 margen " (click) = "goToCharacteresHouse(house)">
+  <div *ngFor="let house of houses" class="col s3 margen selected" style="cursor:pointer" (click) = "goToCharacteresHouse(house)">
     <div class="card">
       <div class="card-image">
         <img src="{{house.image}}" alt="{{house.name}}" width="auto" height="500px" class="">
         <span class="card-title"></span>
       </div>
-      <div class="card-content center-align light-blue-text text-darken-4 bold">
-        <span class="buttom">{{house.name}}</span>
+      <div class="card-content center-align light-blue-text text-darken-4">
+        <span class="buttom titulo"><b>{{house.name}}</b></span>
       </div>
       
     </div>

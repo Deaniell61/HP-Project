@@ -27,12 +27,6 @@ export class HPCharactersService {
     }
     
     getHPCharacter(name: string): Promise<any> {
-      // let url = `${this.basePath}/character/${id}`
-      //   return this.http.get(url)
-      //                     .toPromise()
-      //                     .then(response => response.json().data as HistorialCharacter)
-      //                     .catch(this.handleError)
-      
       return this.getHPCharacters()
                 .then(character => character.find(character => character.name === name.replace('%20',' ')));
     }
@@ -43,33 +37,45 @@ export class HPCharactersService {
                         .toPromise()
                         .then(response => response.json())
                         .catch(this.handleError)
-  }
+    }
 
-  getHPStaff():Promise<any[]> {
-    let url = `${this.basePath}/api/characters/staff`
-    return this.http.get(url)
-                      .toPromise()
-                      .then(response => response.json())
-                      .catch(this.handleError)
-}
+    getHPStaff():Promise<any[]> {
+      let url = `${this.basePath}/api/characters/staff`
+      return this.http.get(url)
+                        .toPromise()
+                        .then(response => response.json())
+                        .catch(this.handleError)
+    }
 
-getHPHouses():Promise<any[]> {
-  let url = `./app/classes/houses.json`
-  return this.http.get(url)
-                    .toPromise()
-                    .then(response => response.json())
-                    .catch(this.handleError)
-}
+    getHPHouses():Promise<any[]> {
+      let url = `./app/classes/houses.json`
+      return this.http.get(url)
+                        .toPromise()
+                        .then(response => response.json())
+                        .catch(this.handleError)
+    }
 
-  getHPCharactersHouse(name: string): Promise<any[]> {
-       
-    let url = `${this.basePath}/api/characters/house/${name.replace('%20',' ')}`
-    return this.http.get(url)
-                      .toPromise()
-                      .then(response => response.json())
-                      .catch(this.handleError)
+    getHPWands():Promise<any[]> {
+      let url = `./app/classes/wand.json`
+      return this.http.get(url)
+                        .toPromise()
+                        .then(response => response.json())
+                        .catch(this.handleError)
+    }
+    getHPWand(name: string): Promise<any> {
+      return this.getHPWands()
+                .then(wand => wand.find(wand => wand.name === name.replace('%20',' ')));
+    }
+
+    getHPCharactersHouse(name: string): Promise<any[]> {
+        
+      let url = `${this.basePath}/api/characters/house/${name.replace('%20',' ')}`
+      return this.http.get(url)
+                        .toPromise()
+                        .then(response => response.json())
+                        .catch(this.handleError)
+      
     
-   
-  }
+    }
     
 }
