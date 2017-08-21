@@ -5,6 +5,7 @@ import { Location } from "@angular/common";
 import { HPCharactersService } from "../services/hp.service";
 
 @Component({
+  moduleId: module.id,
   selector: 'wands',
   templateUrl: './../templates/wands.component.html',
   styleUrls:['./../styles/wands.component.css']

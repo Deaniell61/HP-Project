@@ -3,6 +3,7 @@ import { HPCharactersService } from "../services/hp.service";
 import { Router } from "@angular/router";
 
 @Component({
+  moduleId: module.id,
   selector: 'hp-characters',
   templateUrl: './../templates/hp-characters.component.html'
 })

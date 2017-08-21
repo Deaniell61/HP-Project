@@ -9,6 +9,7 @@ import { WandsComponent } from "./wands.component";
 import 'rxjs/add/operator/switchMap';
 
 @Component({
+  moduleId: module.id,
   selector: 'character-detail',
   templateUrl: './../templates/character-detail.component.html',
   styles: [`
@@ -28,6 +29,8 @@ import 'rxjs/add/operator/switchMap';
 
 export class CharacterDetailComponent implements OnInit {
   @Input() character:any
+  comment:any
+  commentsList:Array<any> = []
   selCharacter:any
     constructor(
         private router:Router,
@@ -41,6 +44,11 @@ export class CharacterDetailComponent implements OnInit {
       this.route.params
         .switchMap((params: ParamMap) => this.characterService.getHPCharacter(params['name']))
         .subscribe(character => this.character = character);
+      
+      this.route.params
+        .switchMap((params: ParamMap) => this.characterService.getComments(params['name']))
+        .subscribe(commentsList => this.commentsList = commentsList);
+      
     }
       
     onSelect(character:any){
@@ -48,6 +56,20 @@ export class CharacterDetailComponent implements OnInit {
       console.log(character.image)
     }
 
+    saveComment(formValue:any)
+    {
+      this.comment = formValue;
+      this.comment['character'] = this.character.name;
+      this.characterService.postComment(this.comment,this.character.name)
+                      .then(data => {
+                        console.log(data)
+                        location.reload();
+                      })
+                      .catch(error=>{
+                        console.log(error.message)
+                      })
+    }
+    
     goBack(): void {
       this.location.back();
     }

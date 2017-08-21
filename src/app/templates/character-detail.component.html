@@ -17,3 +17,73 @@
       </div>
     </div>
   </div>
+
+  <div class="row">
+    <div class="col s8 offset-s2 card">
+      
+        <div class="col s12 m8 offset-m2 l6 " *ngFor="let key of commentsList | keys, let i = index">
+            <div class="card-panel grey lighten-5 z-depth-1">
+              <div class="row valign-wrapper">
+                <div class="col s2">
+                    <span>{{commentsList[key].firstname}} {{commentsList[key].lastname}} </span>
+                </div>
+                <div class="col s10">
+                  <span class="black-text center-align" style="text-align:center">
+                      {{commentsList[key].comment}}
+                  </span>
+                </div>
+              </div>
+            </div>    
+        </div>
+      
+    </div>
+  </div>
+  <div class="row ">
+    <div class="col s4 offset-s6 card">
+      <form #commentForm="ngForm" (ngSubmit)="saveComment(commentForm.value)">
+        <div class="input-field col s6">
+        <i class="material-icons prefix">person_add</i>
+        <input id="icon_prefix" type="text" class="validate" name="firstname" ngModel #firstname="ngModel" required>
+        <label for="icon_prefix">First Name</label>
+      </div>
+      <div *ngIf="firstname.invalid && (firstname.dirty || firstname.touched)"
+      class="alert alert-danger">
+      <small *ngIf="firstname.errors.required">
+        <strong>El nombre</strong> del Heroe es requerido.
+      </small>
+
+      </div>
+      <div class="input-field col s6">
+            <i class="material-icons prefix">perm_identity</i>
+          <input id="last_name" type="text" class="validate" name="lastname" ngModel #lastname="ngModel" required>
+          <label for="last_name">Last Name</label>
+        </div>
+        <div *ngIf="lastname.invalid && (lastname.dirty || lastname.touched)"
+        class="alert alert-danger">
+        <small *ngIf="lastname.errors.required">
+          <strong>El nombre</strong> del Heroe es requerido.
+        </small>
+  
+        </div>
+      <div class="input-field col s12">
+        <textarea id="comment" class="materialize-textarea" name="comment" ngModel #comment="ngModel" required></textarea>
+        <label for="comment">Comment</label>
+      </div>
+
+      <div *ngIf="comment.invalid && (comment.dirty || comment.touched)"
+      class="alert alert-danger">
+      <small *ngIf="comment.errors.required">
+        <strong>El nombre</strong> del Heroe es requerido.
+      </small>
+
+      </div>
+      
+      <div class="col s4 offset-s8">
+        <button class="waves-effect waves-light btn" [disabled]="!commentForm.form.valid">
+          <i class="material-icons right">save</i>save  
+        </button>
+      </div>
+      </form>
+      
+    </div>
+  </div>

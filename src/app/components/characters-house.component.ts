@@ -7,6 +7,7 @@ import { HPCharactersService } from "../services/hp.service";
 import 'rxjs/add/operator/switchMap';
 
 @Component({
+  moduleId: module.id,
   selector: 'characters-house',
   templateUrl: './../templates/characters-house.component.html'
 })

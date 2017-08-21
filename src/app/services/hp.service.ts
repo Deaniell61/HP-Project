@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core'
-import { Http } from "@angular/http";
+import { Http, Headers } from "@angular/http";
 
 import "rxjs/add/operator/toPromise";
 
@@ -8,6 +8,10 @@ export class HPCharactersService {
     
     private basePath = require('../config')
 
+    headers = new Headers({'Content-Type':'application/json'})
+    commentsUrl = "https://hp-comments.firebaseio.com/comments"
+    commentUrl = "https://hp-comments.firebaseio.com/comments"
+    
     constructor(private http:Http){
 
     }
@@ -76,6 +80,37 @@ export class HPCharactersService {
                         .catch(this.handleError)
       
     
+    }
+    postComment(comment:any,character:string):Promise<any>{
+      let body = JSON.stringify(comment)
+      return this.http.post(`${this.commentUrl}/${character}.json`,body,{headers: this.headers})
+                      .toPromise()
+                      .then(response => {
+                        console.log(response.json())
+                        return response.json()
+                      })
+                      .catch(this.handleError)
+    }
+    getComment(id:any):Promise<any> {
+      let url = `${this.commentUrl}/${id}.json`
+      return this.http.get(url,{headers: this.headers})
+                      .toPromise()
+                      .then(response => {
+                        console.log(response.json())
+                        return response.json()
+                      })
+                      .catch(this.handleError)
+    }
+  
+    getComments(character:string):Promise<any> {
+      let url = `${this.commentsUrl}/${character}.json`
+      return this.http.get(url,{headers: this.headers})
+                      .toPromise()
+                      .then(response => {
+                        console.log(response.json())
+                        return response.json()
+                      })
+                      .catch(this.handleError)
     }
     
 }

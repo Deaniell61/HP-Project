@@ -4,6 +4,7 @@ import { Router } from "@angular/router";
 
 
 @Component({
+  moduleId: module.id,
   selector: 'houses',
   templateUrl: './../templates/houses.component.html',
   styles: [`

@@ -1,5 +1,6 @@
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from "@angular/forms";
 import { HttpModule } from "@angular/http";
 
 import { AppComponent }  from './app.component';
@@ -12,6 +13,8 @@ import { CharactersHouseComponent } from "./components/characters-house.componen
 import { HousesComponent } from "./components/houses.component";
 import { WandsComponent } from "./components/wands.component";
 
+import { KeysPipe } from './pipes/keys.pipe';
+
 import { HPCharactersService } from "./services/hp.service";
 
 import { AppRoutesModule } from "./routes/app-routes.router";
@@ -19,6 +22,7 @@ import { AppRoutesModule } from "./routes/app-routes.router";
 @NgModule({
   imports:      [ 
                   BrowserModule,
+                  FormsModule,
                   HttpModule,
                   AppRoutesModule 
                 ],
@@ -31,7 +35,8 @@ import { AppRoutesModule } from "./routes/app-routes.router";
                   StudentsComponent,
                   CharactersHouseComponent,
                   HousesComponent,
-                  WandsComponent
+                  WandsComponent,
+                  KeysPipe
                 ],
   providers:    [ HPCharactersService ],
   bootstrap:    [ AppComponent ]
