@@ -12,6 +12,7 @@ import { StaffComponent } from "./components/staff.component";
 import { CharactersHouseComponent } from "./components/characters-house.component";
 import { HousesComponent } from "./components/houses.component";
 import { WandsComponent } from "./components/wands.component";
+import { InfoComponent } from "./components/info-character.component";
 
 import { KeysPipe } from './pipes/keys.pipe';
 
@@ -36,6 +37,7 @@ import { AppRoutesModule } from "./routes/app-routes.router";
                   CharactersHouseComponent,
                   HousesComponent,
                   WandsComponent,
+                  InfoComponent,
                   KeysPipe
                 ],
   providers:    [ HPCharactersService ],

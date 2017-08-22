@@ -1,0 +1,8 @@
+<div *ngIf="character" class="left-align" style="z-index: 5;width: 25%;    top: 10%;position: absolute;">
+    <span class="titulo">Birth:</span><span class="info">{{character.dateOfBirth}}</span><br>
+    <span class="titulo">Year of Birth:</span><span class="info">{{character.yearOfBirth}}</span><br>
+    <span class="titulo">Ancestry:</span><span class="info">{{character.ancestry.charAt(0).toUpperCase() + character.ancestry.slice(1)}}</span> <br>
+    <span class="titulo">Patronus:</span><span class="info">{{character.patronus.charAt(0).toUpperCase() + character.patronus.slice(1)}}</span> <br>
+    <span class="titulo">¿Alive?:</span><span class="info">{{character.alive?'Yes':'No'}}</span> <br>
+    <span class="titulo">Actor:</span><span class="info">{{character.actor.charAt(0).toUpperCase() + character.actor.slice(1)}}</span> <br>
+  </div>

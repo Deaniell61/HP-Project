@@ -32,6 +32,7 @@ export class CharacterDetailComponent implements OnInit {
   comment:any
   commentsList:Array<any> = []
   selCharacter:any
+  selCharacterInfo:any
     constructor(
         private router:Router,
         private route:ActivatedRoute,
@@ -43,17 +44,18 @@ export class CharacterDetailComponent implements OnInit {
     ngOnInit(): void {
       this.route.params
         .switchMap((params: ParamMap) => this.characterService.getHPCharacter(params['name']))
-        .subscribe(character => this.character = character);
+        .subscribe(character => {
+            this.character = character
+            this.selCharacterInfo = character});
       
       this.route.params
         .switchMap((params: ParamMap) => this.characterService.getComments(params['name']))
         .subscribe(commentsList => this.commentsList = commentsList);
-      
+        
     }
       
     onSelect(character:any){
       this.selCharacter = character;
-      console.log(character.image)
     }
 
     saveComment(formValue:any)
