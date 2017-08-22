@@ -3,6 +3,6 @@
   <img *ngIf="wands.image==''" src="http://www.clker.com/cliparts/Z/9/K/p/a/L/wand-md.png" alt="UNKNOW Wand" width="100%" height="90%" class="varita">
   <div style="margin-left:5%;"><span class="titulo"><b>Wood: </b></span><span *ngIf="wands.wood!=''" class="text">{{wands.wood.charAt(0).toUpperCase() + wands.wood.slice(1)}}</span><span *ngIf="wands.wood==''" class="text">UNKNOW</span></div>
   <div style="margin-left:5%;"><span class="titulo"><b>Core: </b></span><span *ngIf="wands.core!=''" class="text">{{wands.core.charAt(0).toUpperCase() + wands.core.slice(1)}}</span><span *ngIf="wands.core==''" class="text">UNKNOW</span></div>
-  <div style="margin-left:5%;"><span class="titulo"><b>Length: </b></span><span *ngIf="wands.length!=''" class="text">{{wands.length.charAt(0).toUpperCase() + wands.length.slice(1)}} cm.</span><span *ngIf="wands.length==''" class="text">UNKNOW</span></div>
+  <div style="margin-left:5%;"><span class="titulo"><b>Length: </b></span><span *ngIf="wands.length!=''" class="text">{{wands.length}} cm.</span><span *ngIf="wands.length==''" class="text">UNKNOW</span></div>
 </div>
 
